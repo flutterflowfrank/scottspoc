@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "176115559488",
+    "project_id": "scottspoc",
+    "storage_bucket": "scottspoc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176115559488:android:cc9e34af78c24e97bfc3a5",
+        "android_client_info": {
+          "package_name": "com.mycompany.scottspoc"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_12HPE2ZQhIivCjW62wwS4-oiJdCdICE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:176115559488:android:17410a8cd4d0c6cdbfc3a5",
+        "android_client_info": {
+          "package_name": "com.mycompany.scottspoctablet"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD_12HPE2ZQhIivCjW62wwS4-oiJdCdICE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
