@@ -123,7 +123,7 @@ class _ManageFormsWidgetState extends State<ManageFormsWidget>
                   ),
                 ),
               Column(
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   wrapWithModel(
@@ -136,12 +136,12 @@ class _ManageFormsWidgetState extends State<ManageFormsWidget>
                       },
                     ),
                   ),
-                  Padding(
-                    padding:
-                        const EdgeInsetsDirectional.fromSTEB(20.0, 15.0, 15.0, 0.0),
-                    child: SingleChildScrollView(
+                  Flexible(
+                    child: Padding(
+                      padding:
+                          const EdgeInsetsDirectional.fromSTEB(20.0, 15.0, 15.0, 0.0),
                       child: Column(
-                        mainAxisSize: MainAxisSize.max,
+                        mainAxisSize: MainAxisSize.min,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           Padding(
@@ -245,152 +245,156 @@ class _ManageFormsWidgetState extends State<ManageFormsWidget>
                               ],
                             ),
                           ),
-                          Container(
-                            width: MediaQuery.sizeOf(context).width * 0.75,
-                            height: MediaQuery.sizeOf(context).height * 1.0,
-                            decoration: BoxDecoration(
-                              color: FlutterFlowTheme.of(context)
-                                  .secondaryBackground,
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsetsDirectional.fromSTEB(
-                                  16.0, 24.0, 16.0, 24.0),
-                              child: Column(
-                                children: [
-                                  Align(
-                                    alignment: const Alignment(0.0, 0),
-                                    child: TabBar(
-                                      labelColor: FlutterFlowTheme.of(context)
-                                          .primaryText,
-                                      unselectedLabelColor:
-                                          FlutterFlowTheme.of(context)
-                                              .secondaryText,
-                                      labelStyle: FlutterFlowTheme.of(context)
-                                          .titleMedium,
-                                      unselectedLabelStyle: const TextStyle(),
-                                      indicatorColor:
-                                          FlutterFlowTheme.of(context).primary,
-                                      padding: const EdgeInsets.all(4.0),
-                                      tabs: [
-                                        Tab(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'h6q60bu5' /* MIP Check */,
+                          Flexible(
+                            child: Container(
+                              width: MediaQuery.sizeOf(context).width * 0.75,
+                              height: MediaQuery.sizeOf(context).height * 1.0,
+                              decoration: BoxDecoration(
+                                color: FlutterFlowTheme.of(context)
+                                    .secondaryBackground,
+                              ),
+                              child: Padding(
+                                padding: const EdgeInsetsDirectional.fromSTEB(
+                                    16.0, 24.0, 16.0, 24.0),
+                                child: Column(
+                                  children: [
+                                    Align(
+                                      alignment: const Alignment(0.0, 0),
+                                      child: TabBar(
+                                        labelColor: FlutterFlowTheme.of(context)
+                                            .primaryText,
+                                        unselectedLabelColor:
+                                            FlutterFlowTheme.of(context)
+                                                .secondaryText,
+                                        labelStyle: FlutterFlowTheme.of(context)
+                                            .titleMedium,
+                                        unselectedLabelStyle: const TextStyle(),
+                                        indicatorColor:
+                                            FlutterFlowTheme.of(context)
+                                                .primary,
+                                        padding: const EdgeInsets.all(4.0),
+                                        tabs: [
+                                          Tab(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'h6q60bu5' /* MIP Check */,
+                                            ),
                                           ),
-                                        ),
-                                        Tab(
-                                          text: FFLocalizations.of(context)
-                                              .getText(
-                                            'xvluj6jh' /* Startup Checklist */,
+                                          Tab(
+                                            text: FFLocalizations.of(context)
+                                                .getText(
+                                              'xvluj6jh' /* Startup Checklist */,
+                                            ),
                                           ),
-                                        ),
-                                      ],
-                                      controller: _model.tabBarController,
-                                      onTap: (i) async {
-                                        [() async {}, () async {}][i]();
-                                      },
+                                        ],
+                                        controller: _model.tabBarController,
+                                        onTap: (i) async {
+                                          [() async {}, () async {}][i]();
+                                        },
+                                      ),
                                     ),
-                                  ),
-                                  Expanded(
-                                    child: TabBarView(
-                                      controller: _model.tabBarController,
-                                      children: [
-                                        StreamBuilder<MipChecksRecord>(
-                                          stream: MipChecksRecord.getDocument(
-                                              functions
-                                                  .mipCheckDocumentRefFromString()!),
-                                          builder: (context, snapshot) {
-                                            // Customize what your widget looks like when it's loading.
-                                            if (!snapshot.hasData) {
-                                              return Center(
-                                                child: SizedBox(
-                                                  width: 50.0,
-                                                  height: 50.0,
-                                                  child:
-                                                      CircularProgressIndicator(
-                                                    valueColor:
-                                                        AlwaysStoppedAnimation<
-                                                            Color>(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primary,
+                                    Expanded(
+                                      child: TabBarView(
+                                        controller: _model.tabBarController,
+                                        children: [
+                                          StreamBuilder<MipChecksRecord>(
+                                            stream: MipChecksRecord.getDocument(
+                                                functions
+                                                    .mipCheckDocumentRefFromString()!),
+                                            builder: (context, snapshot) {
+                                              // Customize what your widget looks like when it's loading.
+                                              if (!snapshot.hasData) {
+                                                return Center(
+                                                  child: SizedBox(
+                                                    width: 50.0,
+                                                    height: 50.0,
+                                                    child:
+                                                        CircularProgressIndicator(
+                                                      valueColor:
+                                                          AlwaysStoppedAnimation<
+                                                              Color>(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
+                                                      ),
                                                     ),
                                                   ),
+                                                );
+                                              }
+                                              final adminEditMipChecklistMipChecksRecord =
+                                                  snapshot.data!;
+                                              return wrapWithModel(
+                                                model: _model
+                                                    .adminEditMipChecklistModel,
+                                                updateCallback: () =>
+                                                    setState(() {}),
+                                                child:
+                                                    AdminEditMipChecklistWidget(
+                                                  questions:
+                                                      adminEditMipChecklistMipChecksRecord
+                                                          .mipCheck,
                                                 ),
                                               );
-                                            }
-                                            final adminEditMipChecklistMipChecksRecord =
-                                                snapshot.data!;
-                                            return wrapWithModel(
-                                              model: _model
-                                                  .adminEditMipChecklistModel,
-                                              updateCallback: () =>
-                                                  setState(() {}),
-                                              child:
-                                                  AdminEditMipChecklistWidget(
-                                                questions:
-                                                    adminEditMipChecklistMipChecksRecord
-                                                        .mipCheck,
-                                              ),
-                                            );
-                                          },
-                                        ),
-                                        StreamBuilder<
-                                            List<StartupChecklistsRecord>>(
-                                          stream: queryStartupChecklistsRecord(
-                                            singleRecord: true,
+                                            },
                                           ),
-                                          builder: (context, snapshot) {
-                                            // Customize what your widget looks like when it's loading.
-                                            if (!snapshot.hasData) {
-                                              return Center(
-                                                child: SizedBox(
-                                                  width: 50.0,
-                                                  height: 50.0,
-                                                  child:
-                                                      CircularProgressIndicator(
-                                                    valueColor:
-                                                        AlwaysStoppedAnimation<
-                                                            Color>(
-                                                      FlutterFlowTheme.of(
-                                                              context)
-                                                          .primary,
+                                          StreamBuilder<
+                                              List<StartupChecklistsRecord>>(
+                                            stream:
+                                                queryStartupChecklistsRecord(
+                                              singleRecord: true,
+                                            ),
+                                            builder: (context, snapshot) {
+                                              // Customize what your widget looks like when it's loading.
+                                              if (!snapshot.hasData) {
+                                                return Center(
+                                                  child: SizedBox(
+                                                    width: 50.0,
+                                                    height: 50.0,
+                                                    child:
+                                                        CircularProgressIndicator(
+                                                      valueColor:
+                                                          AlwaysStoppedAnimation<
+                                                              Color>(
+                                                        FlutterFlowTheme.of(
+                                                                context)
+                                                            .primary,
+                                                      ),
                                                     ),
                                                   ),
+                                                );
+                                              }
+                                              List<StartupChecklistsRecord>
+                                                  adminEditStartupChecklistStartupChecklistsRecordList =
+                                                  snapshot.data!;
+                                              // Return an empty Container when the item does not exist.
+                                              if (snapshot.data!.isEmpty) {
+                                                return Container();
+                                              }
+                                              final adminEditStartupChecklistStartupChecklistsRecord =
+                                                  adminEditStartupChecklistStartupChecklistsRecordList
+                                                          .isNotEmpty
+                                                      ? adminEditStartupChecklistStartupChecklistsRecordList
+                                                          .first
+                                                      : null;
+                                              return wrapWithModel(
+                                                model: _model
+                                                    .adminEditStartupChecklistModel,
+                                                updateCallback: () =>
+                                                    setState(() {}),
+                                                child:
+                                                    AdminEditStartupChecklistWidget(
+                                                  questions:
+                                                      adminEditStartupChecklistStartupChecklistsRecord!
+                                                          .startupChecklist,
                                                 ),
                                               );
-                                            }
-                                            List<StartupChecklistsRecord>
-                                                adminEditStartupChecklistStartupChecklistsRecordList =
-                                                snapshot.data!;
-                                            // Return an empty Container when the item does not exist.
-                                            if (snapshot.data!.isEmpty) {
-                                              return Container();
-                                            }
-                                            final adminEditStartupChecklistStartupChecklistsRecord =
-                                                adminEditStartupChecklistStartupChecklistsRecordList
-                                                        .isNotEmpty
-                                                    ? adminEditStartupChecklistStartupChecklistsRecordList
-                                                        .first
-                                                    : null;
-                                            return wrapWithModel(
-                                              model: _model
-                                                  .adminEditStartupChecklistModel,
-                                              updateCallback: () =>
-                                                  setState(() {}),
-                                              child:
-                                                  AdminEditStartupChecklistWidget(
-                                                questions:
-                                                    adminEditStartupChecklistStartupChecklistsRecord!
-                                                        .startupChecklist,
-                                              ),
-                                            );
-                                          },
-                                        ),
-                                      ],
+                                            },
+                                          ),
+                                        ],
+                                      ),
                                     ),
-                                  ),
-                                ],
+                                  ],
+                                ),
                               ),
                             ),
                           ),

@@ -109,7 +109,7 @@ class _MIPBagCheckEditWidgetState extends State<MIPBagCheckEditWidget>
                       },
                     ),
                   ),
-                  SingleChildScrollView(
+                  Flexible(
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [

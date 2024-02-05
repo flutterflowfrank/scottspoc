@@ -83,6 +83,7 @@ class _AdminEditMipChecklistWidgetState
                         itemBuilder: (context, questionsIndex) {
                           final questionsItem = questions[questionsIndex];
                           return Container(
+                            width: MediaQuery.sizeOf(context).width * 1.0,
                             decoration: const BoxDecoration(),
                             child: Padding(
                               padding: const EdgeInsetsDirectional.fromSTEB(
