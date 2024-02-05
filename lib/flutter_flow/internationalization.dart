@@ -497,56 +497,6 @@ final kTranslationsMap = <Map<String, Map<String, String>>>[
       'es': 'Verificación MIP',
       'fr': 'Vérification MIP',
     },
-    '4hkqkkuv': {
-      'en': '00000967_Destructive Seal',
-      'es': '',
-      'fr': '',
-    },
-    'w9qbtsbz': {
-      'en': '00000976_Lot Code',
-      'es': '',
-      'fr': '',
-    },
-    '1f9qj9yy': {
-      'en': '00003040_Trim (ignore if not required)',
-      'es': '',
-      'fr': '',
-    },
-    'qh2owvyn': {
-      'en': 'Vent Holes Present',
-      'es': '',
-      'fr': '',
-    },
-    'y50oymor': {
-      'en': '00003276_Volume (or Weight)',
-      'es': '',
-      'fr': '',
-    },
-    'b6hw1utr': {
-      'en': 'No Holes in Corners ',
-      'es': '',
-      'fr': '',
-    },
-    '6dq1ivpz': {
-      'en': 'Pkg Colors Correct',
-      'es': '',
-      'fr': '',
-    },
-    'uqax86gl': {
-      'en': '0000211_Bulk Density',
-      'es': '',
-      'fr': '',
-    },
-    'pczttla0': {
-      'en': '0000977_Oversized Particles (g)',
-      'es': '',
-      'fr': '',
-    },
-    'ccwklsod': {
-      'en': 'Add New Field/Control',
-      'es': 'Agregar nuevo campo/control',
-      'fr': 'Ajouter un nouveau champ/contrôle',
-    },
     'oe6ku3ai': {
       'en': '5-Bag',
       'es': '5 bolsas',

@@ -25,5 +25,5 @@ DocumentReference? startupCheckListRefFromString() {
 // Master copy of the MIP Checks document.
   return FirebaseFirestore.instance
       .collection('startup_checklists')
-      .doc("TODO");
+      .doc("SbUVMIg2aE4DhB4Cj5KS");
 }

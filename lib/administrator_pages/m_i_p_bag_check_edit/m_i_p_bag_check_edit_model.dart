@@ -1,6 +1,5 @@
+import '/administrator_pages/admin_edit_mip_checklist/admin_edit_mip_checklist_widget.dart';
 import '/components/bag_check_input_widget.dart';
-import '/components/checklist_input_must_widget.dart';
-import '/components/checklist_radio_item_widget.dart';
 import '/flutter_flow/flutter_flow_util.dart';
 import '/navigation/app_bar/app_bar_widget.dart';
 import '/navigation/side_nav/side_nav_widget.dart';
@@ -20,24 +19,8 @@ class MIPBagCheckEditModel extends FlutterFlowModel<MIPBagCheckEditWidget> {
   int get tabBarCurrentIndex =>
       tabBarController != null ? tabBarController!.index : 0;
 
-  // Model for checklistRadioItem component.
-  late ChecklistRadioItemModel checklistRadioItemModel1;
-  // Model for checklistInputMust component.
-  late ChecklistInputMustModel checklistInputMustModel1;
-  // Model for checklistRadioItem component.
-  late ChecklistRadioItemModel checklistRadioItemModel2;
-  // Model for checklistRadioItem component.
-  late ChecklistRadioItemModel checklistRadioItemModel3;
-  // Model for checklistInputMust component.
-  late ChecklistInputMustModel checklistInputMustModel2;
-  // Model for checklistRadioItem component.
-  late ChecklistRadioItemModel checklistRadioItemModel4;
-  // Model for checklistRadioItem component.
-  late ChecklistRadioItemModel checklistRadioItemModel5;
-  // Model for checklistInputMust component.
-  late ChecklistInputMustModel checklistInputMustModel3;
-  // Model for checklistInputMust component.
-  late ChecklistInputMustModel checklistInputMustModel4;
+  // Model for AdminEditMipChecklist component.
+  late AdminEditMipChecklistModel adminEditMipChecklistModel;
   // Model for bagCheckInput component.
   late BagCheckInputModel bagCheckInputModel1;
   // Model for bagCheckInput component.
@@ -81,24 +64,8 @@ class MIPBagCheckEditModel extends FlutterFlowModel<MIPBagCheckEditWidget> {
   void initState(BuildContext context) {
     sideNavModel1 = createModel(context, () => SideNavModel());
     appBarModel = createModel(context, () => AppBarModel());
-    checklistRadioItemModel1 =
-        createModel(context, () => ChecklistRadioItemModel());
-    checklistInputMustModel1 =
-        createModel(context, () => ChecklistInputMustModel());
-    checklistRadioItemModel2 =
-        createModel(context, () => ChecklistRadioItemModel());
-    checklistRadioItemModel3 =
-        createModel(context, () => ChecklistRadioItemModel());
-    checklistInputMustModel2 =
-        createModel(context, () => ChecklistInputMustModel());
-    checklistRadioItemModel4 =
-        createModel(context, () => ChecklistRadioItemModel());
-    checklistRadioItemModel5 =
-        createModel(context, () => ChecklistRadioItemModel());
-    checklistInputMustModel3 =
-        createModel(context, () => ChecklistInputMustModel());
-    checklistInputMustModel4 =
-        createModel(context, () => ChecklistInputMustModel());
+    adminEditMipChecklistModel =
+        createModel(context, () => AdminEditMipChecklistModel());
     bagCheckInputModel1 = createModel(context, () => BagCheckInputModel());
     bagCheckInputModel2 = createModel(context, () => BagCheckInputModel());
     bagCheckInputModel3 = createModel(context, () => BagCheckInputModel());
@@ -125,15 +92,7 @@ class MIPBagCheckEditModel extends FlutterFlowModel<MIPBagCheckEditWidget> {
     sideNavModel1.dispose();
     appBarModel.dispose();
     tabBarController?.dispose();
-    checklistRadioItemModel1.dispose();
-    checklistInputMustModel1.dispose();
-    checklistRadioItemModel2.dispose();
-    checklistRadioItemModel3.dispose();
-    checklistInputMustModel2.dispose();
-    checklistRadioItemModel4.dispose();
-    checklistRadioItemModel5.dispose();
-    checklistInputMustModel3.dispose();
-    checklistInputMustModel4.dispose();
+    adminEditMipChecklistModel.dispose();
     bagCheckInputModel1.dispose();
     bagCheckInputModel2.dispose();
     bagCheckInputModel3.dispose();

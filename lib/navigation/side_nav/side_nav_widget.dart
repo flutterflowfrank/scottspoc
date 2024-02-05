@@ -187,24 +187,51 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                 ),
-                                onTap: () async {},
+                                onTap: () async {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Under construction!',
+                                        style: TextStyle(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                        ),
+                                      ),
+                                      duration: const Duration(milliseconds: 4000),
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .secondary,
+                                    ),
+                                  );
+                                },
                               ),
                             ),
-                            wrapWithModel(
-                              model: _model.sideNavPageItemModel4,
-                              updateCallback: () => setState(() {}),
-                              child: SideNavPageItemWidget(
-                                label: FFLocalizations.of(context).getText(
-                                  'geyc5fra' /* Manage Forms */,
+                            InkWell(
+                              splashColor: Colors.transparent,
+                              focusColor: Colors.transparent,
+                              hoverColor: Colors.transparent,
+                              highlightColor: Colors.transparent,
+                              onTap: () async {
+                                context.pushNamed('ManageForms');
+                              },
+                              child: wrapWithModel(
+                                model: _model.sideNavPageItemModel4,
+                                updateCallback: () => setState(() {}),
+                                child: SideNavPageItemWidget(
+                                  label: FFLocalizations.of(context).getText(
+                                    'geyc5fra' /* Manage Forms */,
+                                  ),
+                                  isSelected: widget.currentPage ==
+                                      Navigation.ManageForms,
+                                  icon: Icon(
+                                    Icons.dynamic_form,
+                                    color: FlutterFlowTheme.of(context)
+                                        .primaryBackground,
+                                  ),
+                                  onTap: () async {
+                                    context.pushNamed('ManageForms');
+                                  },
                                 ),
-                                isSelected: widget.currentPage ==
-                                    Navigation.ManageForms,
-                                icon: Icon(
-                                  Icons.dynamic_form,
-                                  color: FlutterFlowTheme.of(context)
-                                      .primaryBackground,
-                                ),
-                                onTap: () async {},
                               ),
                             ),
                             wrapWithModel(
@@ -221,7 +248,23 @@ class _SideNavWidgetState extends State<SideNavWidget> {
                                   color: FlutterFlowTheme.of(context)
                                       .primaryBackground,
                                 ),
-                                onTap: () async {},
+                                onTap: () async {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      content: Text(
+                                        'Under construction!',
+                                        style: TextStyle(
+                                          color: FlutterFlowTheme.of(context)
+                                              .primaryText,
+                                        ),
+                                      ),
+                                      duration: const Duration(milliseconds: 4000),
+                                      backgroundColor:
+                                          FlutterFlowTheme.of(context)
+                                              .secondary,
+                                    ),
+                                  );
+                                },
                               ),
                             ),
                           ],

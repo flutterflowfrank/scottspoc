@@ -1,8 +1,8 @@
 import '/backend/schema/structs/index.dart';
 import '/components/base_button_widget.dart';
-import '/components/question_widget.dart';
 import '/flutter_flow/flutter_flow_theme.dart';
 import '/flutter_flow/flutter_flow_util.dart';
+import '/operator_pages/question/question_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'm_i_p_checklist_component_model.dart';
